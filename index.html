@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Global Atlas | Explore Countries & Cultures</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <h1><i class="fa-solid fa-earth-americas"></i> Global Atlas</h1>
+      <p>Discover demographics, cultural heritage, and neighboring borders worldwide.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls-section">
+      <div class="search-box">
+        <i class="fa-solid fa-magnifying-glass search-icon"></i>
+        <input type="text" id="search-input" placeholder="Search country by name..." />
+      </div>
+      
+      <div class="filter-box">
+        <select id="region-filter">
+          <option value="all">All Regions</option>
+          <option value="Africa">Africa</option>
+          <option value="Americas">Americas</option>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="Oceania">Oceania</option>
+        </select>
+      </div>
+
+      <button id="view-favorites-btn">
+        <i class="fa-solid fa-bookmark"></i> Favorites (<span id="fav-count">0</span>)
+      </button>
+    </section>
+x
+    <div id="status-message" class="status-message hidden"></div>
+
+    <section id="countries-grid" class="countries-grid">
+      <!-- Country Cards Injected Dynamically -->
+    </section>
+  </main>
+
+  <!-- Country Detail Modal -->
+  <div id="country-modal" class="modal hidden">
+    <div class="modal-content">
+      <button id="modal-close-btn" class="modal-close">&times;</button>
+      <div id="modal-body-content">
+        <!-- Injected Dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
